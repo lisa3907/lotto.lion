@@ -1,0 +1,11 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">LottoLion</string>
+    <string name="api_url">http://lottoapi.odinsoftware.co.kr/api/</string>
+    <string name="admob_app_id"></string>
+    <string name="banner_ad_unit_id"></string>
+    <string name="push_read_interval_minute">10</string>
+    <string name="gcm_defaultSenderId"></string>
+    <string name="google_api_key"></string>
+    <string name="google_app_id"></string>
+</resources>

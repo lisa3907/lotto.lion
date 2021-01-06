@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--이름-->
+            <ImageView
+                android:id="@+id/iv_label_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="이름"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_name"
+                android:layout_alignBottom="@id/iv_label_name"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="#3296dc"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_label_name"
+                android:layout_alignBottom="@id/iv_label_name"
+                android:layout_marginRight="30dp" />
+        <!--이름-->
+        <!--이메일-->
+            <ImageView
+                android:id="@+id/iv_label_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_name"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="이메일"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_email"
+                android:layout_alignBottom="@id/iv_label_email"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="#3296dc"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_label_email"
+                android:layout_alignBottom="@id/iv_label_email"
+                android:layout_marginRight="30dp" />
+        <!--이메일-->
+        <!--번호생성최대개수-->
+            <ImageView
+                android:id="@+id/iv_label_max"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_email"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="번호생성최대개수"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_max"
+                android:layout_alignBottom="@id/iv_label_max"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/tv_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="#3296dc"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_label_max"
+                android:layout_alignBottom="@id/iv_label_max"
+                android:layout_marginRight="30dp" />
+        <!--번호생성최대개수-->
+        <!--고정번호-->
+            <ImageView
+                android:id="@+id/iv_label_fix"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_max"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="고정번호"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_fix"
+                android:layout_alignBottom="@id/iv_label_fix"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/tv_fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="#3296dc"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_label_fix"
+                android:layout_alignBottom="@id/iv_label_fix"
+                android:layout_marginRight="30dp" />
+        <!--고정번호-->
+        <!--비밀번호변경-->
+            <ImageView
+                android:id="@+id/iv_label_pw"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_fix"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_pw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="비밀번호 변경"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_pw"
+                android:layout_alignBottom="@id/iv_label_pw"
+                android:layout_marginLeft="10dp" />
+        <!--비밀번호변경-->
+        <!--수신함-->
+            <ImageView
+                android:id="@+id/iv_label_push"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_pw"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="수신 메세지"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_push"
+                android:layout_alignBottom="@id/iv_label_push"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:id="@+id/tv_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="#3296dc"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_label_push"
+                android:layout_alignBottom="@id/iv_label_push"
+                android:layout_marginRight="30dp" />
+        <!--수신함-->
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="로그아웃"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_label_push"
+                android:layout_marginTop="10dp"
+                android:background="#3296dc" />
+            <Button
+                android:id="@+id/btn_leave"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="회원탈퇴"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/btn_logout"
+                android:layout_marginTop="5dp"
+                android:background="#dc3232" />
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000"
+        android:visibility="invisible" />
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible" />
+</RelativeLayout>

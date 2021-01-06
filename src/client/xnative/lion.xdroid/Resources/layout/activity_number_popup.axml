@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3C000000"
+    tools:context="Lion.XDroid.Popup.NumberPopupActivity">
+    <ImageView
+        android:id="@+id/iv_popup"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:background="#ffffff" />
+    <ListView
+        android:id="@+id/lv_popup"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignTop="@id/iv_popup"
+        android:layout_centerHorizontal="true"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="0.5dp"
+        android:divider="#b1afaf" />
+<!--<NumberPicker-->
+<!--android:id="@+id/np_popup"-->
+<!--android:layout_width="300dp"-->
+<!--android:layout_height="300dp"-->
+<!--android:layout_alignTop="@id/iv_popup"-->
+<!--android:layout_centerHorizontal="true"-->
+<!--android:theme="@android:style/Theme.Holo.Light">-->
+<!--</NumberPicker>-->
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="취 소"
+        android:background="@drawable/popup_button"
+        android:layout_below="@id/lv_popup"
+        android:layout_alignLeft="@id/iv_popup"
+        android:layout_alignBottom="@id/iv_popup" />
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="확 인"
+        android:background="@drawable/popup_button"
+        android:layout_below="@id/lv_popup"
+        android:layout_alignRight="@id/iv_popup"
+        android:layout_alignBottom="@id/iv_popup" />
+</RelativeLayout>

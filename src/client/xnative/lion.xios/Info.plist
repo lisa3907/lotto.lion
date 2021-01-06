@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>ko</string>
+	<key>CFBundleDisplayName</key>
+	<string>로또사자</string>
+	<key>CFBundleExecutable</key>
+	<string>Lion.XiOS</string>
+	<key>CFBundleIdentifier</key>
+	<string>kr.co.odinsoftware.LION</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Lion.XiOS</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>사용자 카메라에 접근하려고 합니다.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>사용자 위치정보를 사용하려고 합니다.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>사용자 포토라이브러리에 접근하려고 합니다.</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImages.launchimage</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0.1</string>
+	<key>MinimumOSVersion</key>
+	<string>9.3</string>
+	<key>CFBundleVersion</key>
+	<string>2020.4.30</string>
+</dict>
+</plist>

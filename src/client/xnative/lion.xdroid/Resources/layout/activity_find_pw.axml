@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Lion.XDroid.FindPwActivity">
+    <ImageView
+        android:id="@+id/iv_back1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/back" />
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디/비밀번호 찾기"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_toRightOf="@id/iv_back1"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp" />
+    <ImageView
+        android:id="@+id/iv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_below="@id/iv_back"
+        android:layout_marginTop="10dp" />
+<!--이메일-->
+    <TextView
+        android:id="@+id/tv_label_email1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일 주소 인증"
+        android:textSize="13dp"
+        android:layout_below="@id/iv_line1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp" />
+    <ImageView
+        android:id="@+id/iv_label_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_label_email1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/popup_button" />
+    <TextView
+        android:id="@+id/tv_label_email2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="이메일"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_alignTop="@id/iv_label_email"
+        android:layout_alignBottom="@id/iv_label_email"
+        android:layout_marginLeft="10dp" />
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_label_email1"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/popup_button" />
+    <Button
+        android:id="@+id/btn_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="임시 비번 발송"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_label_email"
+        android:background="#3296dc" />
+<!--이메일-->
+    <TextView
+        android:id="@+id/tv_label_email3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="가입했던 이메일 주소를 입력하세요.\n아이디와 임시 비밀번호를 발송합니다."
+        android:textSize="13dp"
+        android:layout_below="@id/btn_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp" />
+    <Button
+        android:id="@+id/btn_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000"
+        android:visibility="invisible"
+        android:elevation="10dp" />
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible"
+        android:elevation="10dp" />
+</RelativeLayout>

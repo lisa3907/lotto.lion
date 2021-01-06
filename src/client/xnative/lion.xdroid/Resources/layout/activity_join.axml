@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Lion.XDroid.JoinActivity">
+    <ImageView
+        android:id="@+id/iv_back1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/back" />
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_toRightOf="@id/iv_back1"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp" />
+    <ImageView
+        android:id="@+id/iv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_below="@id/iv_back"
+        android:layout_marginTop="10dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_line1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--이메일-->
+            <TextView
+                android:id="@+id/tv_label_email1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이메일 주소 인증"
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp" />
+            <ImageView
+                android:id="@+id/iv_label_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_label_email1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_email2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="이메일"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_email"
+                android:layout_alignBottom="@id/iv_label_email"
+                android:layout_marginLeft="10dp" />
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_label_email1"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/popup_button" />
+            <Button
+                android:id="@+id/btn_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="인증 번호 발송"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_label_email"
+                android:background="#3296dc" />
+        <!--이메일-->
+        <!--인증-->
+            <TextView
+                android:id="@+id/tv_label_certify1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인증 번호 확인"
+                android:textSize="13dp"
+                android:layout_below="@id/btn_email"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp" />
+            <ImageView
+                android:id="@+id/iv_label_certify"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_label_certify1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_certify2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="인증 번호"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_certify"
+                android:layout_alignBottom="@id/iv_label_certify"
+                android:layout_marginLeft="10dp" />
+            <EditText
+                android:id="@+id/et_certify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:inputType="number"
+                android:ems="6"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_label_certify1"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/popup_button" />
+            <Button
+                android:id="@+id/btn_certify"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="인증 확인"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_label_certify"
+                android:background="#3296dc" />
+        <!--인증-->
+        <!--아이디-->
+            <TextView
+                android:id="@+id/tv_label_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정보 입력"
+                android:textSize="13dp"
+                android:layout_below="@id/btn_certify"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp" />
+            <ImageView
+                android:id="@+id/iv_label_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_label_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="아이디"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_id"
+                android:layout_alignBottom="@id/iv_label_id"
+                android:layout_marginLeft="10dp" />
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:inputType="text"
+                android:ems="8"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_label_info"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/popup_button" />
+        <!--아이디-->
+        <!--비밀번호-->
+            <ImageView
+                android:id="@+id/iv_label_pw"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_id"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="비밀번호"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_pw"
+                android:layout_alignBottom="@id/iv_label_pw"
+                android:layout_marginLeft="10dp" />
+            <EditText
+                android:id="@+id/et_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:inputType="textPassword"
+                android:ems="8"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/iv_label_id"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/popup_button" />
+        <!--비밀번호-->
+        <!--비밀번호 확인-->
+            <ImageView
+                android:id="@+id/iv_label_checkPw"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_pw"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_checkPw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="비밀번호 확인"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_checkPw"
+                android:layout_alignBottom="@id/iv_label_checkPw"
+                android:layout_marginLeft="10dp" />
+            <EditText
+                android:id="@+id/et_checkPw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:inputType="textPassword"
+                android:ems="8"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/iv_label_pw"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/popup_button" />
+        <!--비밀번호 확인-->
+        <!--이름-->
+            <ImageView
+                android:id="@+id/iv_label_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/iv_label_checkPw"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/popup_button" />
+            <TextView
+                android:id="@+id/tv_label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="이름"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignTop="@id/iv_label_name"
+                android:layout_alignBottom="@id/iv_label_name"
+                android:layout_marginLeft="10dp" />
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:inputType="text"
+                android:ems="8"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/iv_label_checkPw"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/popup_button" />
+        <!--이름-->
+            <Button
+                android:id="@+id/btn_join"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="가입"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_label_name"
+                android:layout_marginTop="5dp"
+                android:background="#3296dc" />
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000"
+        android:visibility="invisible" />
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/circular_progress_bar"
+        android:visibility="invisible" />
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Lion.XDroid.Setting.SettingNameActivity">
+  <ImageView
+      android:id="@+id/iv_back1"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginLeft="10dp"
+      android:src="@drawable/back"/>
+  <ImageView
+      android:id="@+id/iv_back"
+      android:layout_width="150dp"
+      android:layout_height="40dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="10dp" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="이름 변경"
+      android:textSize="30dp"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      android:layout_toRightOf="@id/iv_back1"
+      android:layout_marginTop="8dp"
+      android:layout_marginLeft="10dp"/>
+
+  <ImageView
+      android:id="@+id/iv_line1"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:background="#CCCCCC"
+      android:layout_below="@id/iv_back"
+      android:layout_marginTop="10dp"/>
+
+  <!--변경 전-->
+  <ImageView
+      android:id="@+id/iv_old_name"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_below="@id/iv_line1"
+      android:layout_marginTop="5dp"
+      android:background="@drawable/popup_button"/>
+
+  <TextView
+      android:id="@+id/tv_label_old_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="변경 전 "
+      android:textSize="17dp"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      android:layout_alignTop="@id/iv_old_name"
+      android:layout_alignBottom="@id/iv_old_name"
+      android:layout_marginLeft="10dp"/>
+
+  <TextView
+      android:id="@+id/tv_old_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="left|center"
+      android:ems="8"
+      android:textSize="20dp"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/iv_line1"
+      android:layout_marginTop="18dp"
+      android:layout_marginRight="30dp"/>
+  <!--변경 전-->
+
+  <!--변경 후-->
+  <ImageView
+      android:id="@+id/iv_new_name"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_below="@id/iv_old_name"
+      android:layout_marginTop="5dp"
+      android:background="@drawable/popup_button"/>
+
+  <TextView
+      android:id="@+id/tv_label_new_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="변경 후 "
+      android:textSize="17dp"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      android:layout_alignTop="@id/iv_new_name"
+      android:layout_alignBottom="@id/iv_new_name"
+      android:layout_marginLeft="10dp"/>
+
+  <EditText
+      android:id="@+id/et_new_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="left|center"
+      android:ems="8"
+      android:textSize="20dp"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/iv_old_name"
+      android:layout_marginTop="18dp"
+      android:layout_marginRight="30dp"
+      android:background="@drawable/popup_button"/>
+  <!--변경 후-->
+
+  <Button
+      android:id="@+id/btn_change_name"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:text="변경"
+      android:textSize="20dp"
+      android:textStyle="bold"
+      android:textColor="#ffffff"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@id/iv_new_name"
+      android:layout_marginTop="5dp"
+      android:background="#3296dc"/>
+
+  <Button
+      android:id="@+id/btn_loading"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#30000000"
+      android:visibility="invisible"
+      android:elevation="10dp"/>
+  <ProgressBar
+      android:id="@+id/pb_loading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:indeterminateDrawable="@drawable/circular_progress_bar"
+      android:visibility="invisible"
+      android:elevation="10dp"/>
+</RelativeLayout>

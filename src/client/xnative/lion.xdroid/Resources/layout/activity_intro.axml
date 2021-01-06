@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:weightSum="9"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_intro_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="로또사자"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/splash_background" />
+    <ImageView
+        android:id="@+id/iv_intro_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:src="@drawable/qlotto645_580"
+        android:background="@color/splash_background" />
+    <TextView
+        android:id="@+id/tv_intro_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="OdinSoft"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:background="@color/splash_background" />
+    <TextView
+        android:id="@+id/tv_intro_version"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="vx.xx"
+        android:textSize="15dp"
+        android:background="@color/splash_background" />
+</LinearLayout>
