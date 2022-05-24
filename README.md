@@ -42,6 +42,6 @@ Read [LICENSE](LICENSE)
 
 ## Contact
 
-Home-Page: http://www.odinsoftware.co.kr
+Home-Page: http://www.odinsoft.co.kr
 
-E-MAIL: help@odinsoftware.co.kr
+E-MAIL: help@odinsoft.co.kr
