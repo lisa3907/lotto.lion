@@ -1,38 +1,35 @@
-﻿using LottoLion.BaseLib;
-using LottoLion.BaseLib.Controllers;
-using LottoLion.BaseLib.Models.Entity;
-using LottoLion.BaseLib.Options;
-using LottoLion.BaseLib.Queues;
-using LottoLion.BaseLib.Types;
+﻿using Lion.Share.Controllers;
+using Lion.Share.Data;
+using Lion.Share.Data.DTO;
+using Lion.Share.Data.Models;
+using Lion.Share.Options;
+using Lion.Share.Pipe;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using OdinSdk.BaseLib.Cryption;
 using OdinSdk.BaseLib.WebApi;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LottoLion.WebApi.Controllers
+namespace Lion.WebApi.Controllers
 {
     [Route("api/[controller]")]
     public partial class UserController : Controller
     {
-        private static CCryption __cryptor = new CCryption();
-        private static MemberQ __memberQ;
+        private readonly IConfiguration __configuration;
+        private readonly UserManager __usermgr;
+        private readonly AppDbContext __db_context;
+        private readonly WinnerReader __reader; 
+        private readonly PipeClient __pipe_client;
+        private readonly CCryption __cryptor;
 
-        private IConfiguration __configuration;
-        private UserManager __usermgr;
-        private LottoLionContext __db_context;
-
-        public UserController(IOptions<JwtIssuerOptions> jwtOptions, IConfiguration configuration, LottoLionContext db_context)
+        public UserController(IOptions<JwtIssuerOptions> jwtOptions, IConfiguration configuration, AppDbContext dbContext, WinnerReader reader, PipeClient pipeClient, CCryption cryptor)
         {
             __usermgr = new UserManager(jwtOptions.Value);
-
             __configuration = configuration;
-            __db_context = db_context;
-            __memberQ = new MemberQ();
+            __db_context = dbContext;
+            __reader = reader;
+            __pipe_client = pipeClient;
+            __cryptor = cryptor;
         }
 
         /// <summary>
@@ -48,7 +45,7 @@ namespace LottoLion.WebApi.Controllers
             {
                 var _result = (success: false, message: "ok");
 
-                var _user_infor = (TbLionMember)null;
+                var _user_infor = (mMember)null;
 
                 while (true)
                 {
@@ -59,7 +56,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    _user_infor = __db_context.TbLionMember
+                    _user_infor = __db_context.tb_lion_member
                                         .Where(m => m.LoginId == _login_id && m.IsAlive == true)
                                         .SingleOrDefault();
 
@@ -75,7 +72,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -141,13 +138,13 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                                 .Where(m => m.EmailAddress == app_user.mail_address)
                                                 .SingleOrDefault();
 
                     if (_member == null)
                     {
-                        _member = __db_context.TbLionMember
+                        _member = __db_context.tb_lion_member
                                                 .Where(m => m.LoginId == app_user.login_id)
                                                 .SingleOrDefault();
 
@@ -187,20 +184,20 @@ namespace LottoLion.WebApi.Controllers
                     // 가입 member(회원)에게 즉시 메일 발송 하도록 큐에 명령을 보냅니다.
                     if (_result.success == true)
                     {
-                        var _choice = new TChoice()
+                        var _choice = new dChoice()
                         {
                             login_id = app_user.login_id,
-                            sequence_no = WinnerReader.GetNextWeekSequenceNo(),
+                            sequence_no = __reader.GetNextWeekSequenceNo(),
                             resend = true
                         };
 
-                        await __memberQ.SendQAsync(_choice);
+                        await __pipe_client.RequestToChoicerQ(_choice);
                     }
 
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -260,13 +257,13 @@ namespace LottoLion.WebApi.Controllers
 
                     app_user.login_id = app_user.facebook_id;
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                                 .Where(m => m.EmailAddress == app_user.mail_address)
                                                 .SingleOrDefault();
 
                     if (_member == null)
                     {
-                        _member = __db_context.TbLionMember
+                        _member = __db_context.tb_lion_member
                                                     .Where(m => m.LoginId == app_user.facebook_id)
                                                     .SingleOrDefault();
 
@@ -306,20 +303,20 @@ namespace LottoLion.WebApi.Controllers
                     // 가입 member(회원)에게 즉시 메일 발송 하도록 큐에 명령을 보냅니다.
                     if (_result.success == true)
                     {
-                        var _choice = new TChoice()
+                        var _choice = new dChoice()
                         {
                             login_id = app_user.login_id,
-                            sequence_no = WinnerReader.GetNextWeekSequenceNo(),
+                            sequence_no = __reader.GetNextWeekSequenceNo(),
                             resend = true
                         };
 
-                        await __memberQ.SendQAsync(_choice);
+                        await __pipe_client.RequestToChoicerQ(_choice);
                     }
 
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -347,7 +344,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                         .Where(m => m.LoginId == _login_id && m.IsAlive == true)
                                         .SingleOrDefault();
 
@@ -383,7 +380,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -427,7 +424,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                             .Where(m => m.LoginId == _login_id && m.IsAlive == true)
                                             .SingleOrDefault();
 
@@ -437,7 +434,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _mail_exist = __db_context.TbLionMember
+                    var _mail_exist = __db_context.tb_lion_member
                                             .Where(m => m.EmailAddress == mail_address)
                                             .SingleOrDefault();
 
@@ -460,7 +457,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -500,7 +497,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                             .Where(m => m.LoginId == _login_id && m.IsAlive == true)
                                             .SingleOrDefault();
 
@@ -530,7 +527,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -559,7 +556,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                             .Where(m => m.LoginId == _login_id && m.IsAlive == true)
                                             .SingleOrDefault();
 
@@ -588,7 +585,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -616,7 +613,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                             .Where(m => m.LoginId == _login_id && m.IsAlive == true)
                                             .SingleOrDefault();
 
@@ -639,7 +636,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,

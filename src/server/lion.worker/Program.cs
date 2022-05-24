@@ -1,40 +1,73 @@
-﻿using LottoLion.BaseLib;
-using LottoLion.Worker.Server;
-using OdinSdk.BaseLib.Configuration;
-using System;
+using Lion.Share.Controllers;
+using Lion.Share.Data;
+using Lion.Share.Pipe;
+using Microsoft.EntityFrameworkCore;
+using OdinSdk.BaseLib.Net.Smtp;
+using System.Runtime.Versioning;
 using System.Text;
-using System.Threading;
 
-namespace LottoLion.Worker
+namespace Lion.Worker
 {
-    internal class Program
+    [SupportedOSPlatform("windows")]
+    public class Program
     {
-        private static LConfig __cconfig = new LConfig();
-
-        private static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var provider = CodePagesEncodingProvider.Instance;
-            Encoding.RegisterProvider(provider);
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
 
-            //__cconfig.SetConfigRoot();
-
-            using (var _hostess = new Hostess())
-            {
-                _hostess.Start();
-
-                if (CRegistry.UserInteractive == true)
+            IHost host = Host.CreateDefaultBuilder(args)
+                .UseWindowsService()
+                .ConfigureLogging((hostContext, builder) =>
                 {
-                    while (Console.ReadLine() != "quit")
-                        Console.WriteLine("Enter 'quit' to stop the services and end the process...");
-                }
+                    builder.ClearProviders()
+                            .AddConsole()
+                            .AddFile(
+                                outputTemplate: "[{Timestamp:yyyy/MM/dd HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}",
+#if DEBUG
+                                minimumLevel: LogLevel.Debug,
+#else
+                                minimumLevel: LogLevel.Information,
+#endif
+                                pathFormat: "D:/project-data/LottoLION/Logger/Worker/log-{Date}.txt"
+                            );
+                })
+                .ConfigureServices((hostContext, services) =>
+                {
+                    services.AddDbContextFactory<AppDbContext>(options =>
+                    {
+                        options.UseSqlServer(hostContext.Configuration.GetConnectionString("DefaultConnection"));
+                    });
 
-                _hostess.Stop();
-            }
+                    services.AddSingleton<MailSenderLottoLion>();
+                    services.AddSingleton<SmtpDirectSender>();
+                    services.AddSingleton<PrintOutLottoLion>();
+                    services.AddSingleton<NotifyPushLottoLion>();
 
-            Console.WriteLine("[program] all services stopped.");
+                    services.AddSingleton<WinnerReader>();
+                    services.AddSingleton<WinnerSelector>();
+                    services.AddSingleton<WinnerMember>();
+                    services.AddSingleton<WinnerScoring>();
+                    services.AddSingleton<WinnerAnalysis>();
+                    services.AddSingleton<WinnerPercent>();
+                    services.AddSingleton<PipeClient>();
 
-            // Keep the console alive for a second to allow the user to see the message.
-            Thread.Sleep(1000);
+                    services.AddHostedService<Engine.Purger>();
+                    services.AddHostedService<Engine.Receiver>();
+
+                    services.AddHostedService<Engine.Processor.Winner>();
+                    services.AddHostedService<Engine.Processor.Selector>();
+                    services.AddHostedService<Engine.Processor.Choicer>();
+                    services.AddHostedService<Engine.Processor.Analyst>();
+
+                    services.AddHostedService<Engine.Collector.Winner>();
+                    services.AddHostedService<Engine.Collector.Selector>();
+                    services.AddHostedService<Engine.Collector.Choicer>();
+                    services.AddHostedService<Engine.Collector.Analyst>();
+                })
+                .Build();
+
+            await host.RunAsync();
         }
     }
 }

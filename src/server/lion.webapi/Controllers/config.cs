@@ -1,7 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using System;
-
-namespace LottoLion.WebApi.Controllers
+﻿namespace Lion.WebApi.Controllers
 {
     public partial class UserController
     {

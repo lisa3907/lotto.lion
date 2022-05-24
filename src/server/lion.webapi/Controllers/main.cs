@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OdinSdk.BaseLib.Configuration;
-using OdinSdk.BaseLib.Queue;
 using OdinSdk.BaseLib.WebApi;
-using System.Threading.Tasks;
 
-namespace LottoLion.WebApi.Controllers
+namespace Lion.WebApi.Controllers
 {
     [Route("api/[controller]")]
     public partial class MainController : Controller
@@ -20,9 +18,9 @@ namespace LottoLion.WebApi.Controllers
             return await CProxy.UsingAsync(() =>
             {
                 if (__version == null)
-                    __version = new ProductInfo("LottoLion-WebApi", "v1.0.0", "webapi service for LottoLion", ProductType.service);
+                    __version = new ProductInfo("Lion.WebApi", "v3.1.0", "WebApi Service for Lotto-Lion", ProductType.service);
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     success = true,
                     message = "",
@@ -39,7 +37,7 @@ namespace LottoLion.WebApi.Controllers
         {
             return await CProxy.UsingAsync(() =>
             {
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     success = true,
                     message = "",

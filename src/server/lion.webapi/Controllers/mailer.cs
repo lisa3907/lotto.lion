@@ -1,16 +1,13 @@
-﻿using LottoLion.BaseLib.Models.Entity;
+﻿using Lion.Share.Data.Models;
 using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using OdinSdk.BaseLib.Net.Smtp;
 using OdinSdk.BaseLib.WebApi;
-using System;
 using System.Collections.Concurrent;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LottoLion.WebApi.Controllers
+namespace Lion.WebApi.Controllers
 {
     public partial class UserController
     {
@@ -92,7 +89,7 @@ namespace LottoLion.WebApi.Controllers
             return _result;
         }
 
-        private (bool success, string message) SendMailRecoveryId(TbLionMember member, string mail_address, string login_id)
+        private (bool success, string message) SendMailRecoveryId(mMember member, string mail_address, string login_id)
         {
             var _result = (success: false, message: "ok");
 
@@ -143,7 +140,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                            .Where(m => m.EmailAddress == mail_address)
                                            .SingleOrDefault();
 
@@ -163,7 +160,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -190,7 +187,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                                 .Where(m => m.EmailAddress == mail_address)
                                                 .SingleOrDefault();
 
@@ -210,7 +207,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -237,7 +234,7 @@ namespace LottoLion.WebApi.Controllers
                         break;
                     }
 
-                    var _member = __db_context.TbLionMember
+                    var _member = __db_context.tb_lion_member
                                                 .Where(m => m.EmailAddress == mail_address)
                                                 .SingleOrDefault();
 
@@ -263,7 +260,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -310,7 +307,7 @@ namespace LottoLion.WebApi.Controllers
                     break;
                 }
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,

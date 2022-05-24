@@ -1,12 +1,10 @@
-﻿using LottoLion.BaseLib.Options;
+﻿using Lion.Share.Options;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OdinSdk.BaseLib.WebApi;
-using System;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
-namespace LottoLion.WebApi.Controllers
+namespace Lion.WebApi.Controllers
 {
     public partial class UserController
     {
@@ -26,10 +24,10 @@ namespace LottoLion.WebApi.Controllers
                                     new Claim("UserType", "Guest")
                                 );
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     success = true,
-                    message = "",
+                    message = "ok",
 
                     result = _token
                 });
@@ -64,7 +62,7 @@ namespace LottoLion.WebApi.Controllers
                 else
                     _result.message = "회원ID와 암호를 입력 바랍니다";
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,
@@ -103,7 +101,7 @@ namespace LottoLion.WebApi.Controllers
                 else
                     _result.message = "facebook-id와 facebook-token이 필요 합니다";
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     _result.success,
                     _result.message,

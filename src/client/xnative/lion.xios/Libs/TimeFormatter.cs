@@ -3,17 +3,20 @@ using System;
 
 namespace Lion.XiOS.Libs
 {
-    public static class UnixTimeHelper
-    {
-        public static double GetUnixEpoch(this DateTime dateTime)
-        {
-            var unixTime = dateTime.ToUniversalTime() - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            return unixTime.TotalSeconds;
-        }
-    }
+    //public static class UnixTimeHelper
+    //{
+    //    public static double GetUnixEpoch(this DateTime dateTime)
+    //    {
+    //        var unixTime = dateTime.ToUniversalTime() - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+    //        return unixTime.TotalSeconds;
+    //    }
+    //}
 
     public class TimeFormatter
     {
+        public static double GetUnixEpoch(DateTime dateTime)
+            => (dateTime.ToUniversalTime() - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds;
+
         public static string DateConverter1(string inputDate)
         {
             var formatter = new NSDateFormatter();
@@ -102,7 +105,7 @@ namespace Lion.XiOS.Libs
 
         private string _getDateWithDateFormat(string format)
         {
-            var timeStamp = DateTime.Now.GetUnixEpoch();
+            var timeStamp = TimeFormatter.GetUnixEpoch(DateTime.Now);
             var date = NSDate.FromTimeIntervalSinceReferenceDate(timeStamp);
 
             var dateFormatter = new NSDateFormatter();
@@ -137,7 +140,7 @@ namespace Lion.XiOS.Libs
 
         public static double GetTodayTimeStamp()
         {
-            return DateTime.Now.GetUnixEpoch();
+            return GetUnixEpoch(DateTime.Now);
         }
 
         public static string GetDateFromTimestampDateDisplayType(double timestamp, string dateType)
@@ -152,7 +155,7 @@ namespace Lion.XiOS.Libs
 
         public int _getDayOfWeek()
         {
-            var timeStamp = DateTime.Now.GetUnixEpoch();
+            var timeStamp = GetUnixEpoch(DateTime.Now);
 
             var date = NSDate.FromTimeIntervalSinceReferenceDate(timeStamp);
             var gregorian = new NSCalendar(NSCalendarType.Gregorian);

@@ -89,7 +89,7 @@ namespace Lion.XDroid
 
         private void InitAdMob()
         {
-            MobileAds.Initialize(this.ApplicationContext, GetString(Resource.String.admob_app_id));
+            MobileAds.Initialize(this.ApplicationContext);
 
             var adView = FindViewById<AdView>(Resource.Id.adView);
             var adRequest = (new AdRequest.Builder()).Build();

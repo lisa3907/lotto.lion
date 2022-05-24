@@ -332,15 +332,15 @@ namespace Lion.XiOS
             {
                 var _header = NSBundle.MainBundle.LoadNib("AdsViewCell", this, null).GetItem<AdsViewCell>(0);
                 {
-                    _header.GADBannerView.AdUnitID = AdUnitId;
+                    _header.GADBannerView.AdUnitId = AdUnitId;
                     _header.GADBannerView.Delegate = this;
                     _header.GADBannerView.RootViewController = this;
                 }
 
                 var _request = Request.GetDefaultRequest();
 
-                if (ConfigHelper.IsSimulator)
-                    _request.TestDevices = new string[] { Request.SimulatorId.ToString() }; // GADRequest.GAD_SIMULATOR_ID 
+                //if (ConfigHelper.IsSimulator)
+                //    _request.TestDevices = new string[] { Request.SimulatorId.ToString() }; // GADRequest.GAD_SIMULATOR_ID 
 
                 _header.GADBannerView.LoadRequest(_request);
                 _result = _header;
@@ -490,14 +490,14 @@ namespace Lion.XiOS
         {
         }
 
-        [Export("adViewDidReceiveAd:")]
-        public void DidReceiveAd(NativeExpressAdView nativeExpressAdView)
-        {
-            if (nativeExpressAdView.VideoController.HasVideoContent())
-                NSLogHelper.NSLog($"adViewDidReceiveAd: HasVideoContent");
-            else
-                NSLogHelper.NSLog($"adViewDidReceiveAd: No HasVideoContent");
-        }
+        //[Export("adViewDidReceiveAd:")]
+        //public void DidReceiveAd(NativeExpressAdView nativeExpressAdView)
+        //{
+        //    if (nativeExpressAdView.VideoController.HasVideoContent())
+        //        NSLogHelper.NSLog($"adViewDidReceiveAd: HasVideoContent");
+        //    else
+        //        NSLogHelper.NSLog($"adViewDidReceiveAd: No HasVideoContent");
+        //}
 
         [Export("videoControllerDidEndVideoPlayback:")]
         public void DidEndVideoPlayback(VideoController videoController)
@@ -505,10 +505,10 @@ namespace Lion.XiOS
             NSLogHelper.NSLog($"videoControllerDidEndVideoPlayback");
         }
 
-        [Export("adView:didFailToReceiveAdWithError:")]
-        public void DidFailToReceiveAd(BannerView adView, RequestError error)
-        {
-            NSLogHelper.NSLog($"adView:didFailToReceiveAdWithError: {error.ToString()}");
-        }
+        //[Export("adView:didFailToReceiveAdWithError:")]
+        //public void DidFailToReceiveAd(BannerView adView, RequestError error)
+        //{
+        //    NSLogHelper.NSLog($"adView:didFailToReceiveAdWithError: {error.ToString()}");
+        //}
     }
 }

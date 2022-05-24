@@ -55,7 +55,8 @@ namespace Lion.XiOS
             this.RegisterForRemoteNotifications();
 
             App.Configure();
-            MobileAds.Configure("ca-app-pub-9319956348219153~7624616801");
+            //MobileAds.Configure("ca-app-pub-9319956348219153~7624616801");
+            MobileAds.SharedInstance.Start(completionHandler: null);
 
             return true;
         }

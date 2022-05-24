@@ -2,10 +2,8 @@
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using OdinSdk.BaseLib.WebApi;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LottoLion.WebApi.Controllers
+namespace Lion.WebApi.Controllers
 {
     public partial class UserController
     {
@@ -21,11 +19,11 @@ namespace LottoLion.WebApi.Controllers
         {
             return await CProxy.UsingAsync(() =>
             {
-                var _result = __db_context.TbLionWinner
+                var _result = __db_context.tb_lion_winner
                                     .OrderByDescending(w => w.SequenceNo)
                                     .ToList();
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     success = true,
                     message = "",
@@ -47,12 +45,12 @@ namespace LottoLion.WebApi.Controllers
         {
             return await CProxy.UsingAsync(() =>
             {
-                var _result = __db_context.TbLionWinner
+                var _result = __db_context.tb_lion_winner
                                     .OrderByDescending(w => w.SequenceNo)
                                     .Skip((pageIndex - 1) * pageRows).Take(pageRows)
                                     .ToList();
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     success = true,
                     message = "",
@@ -73,11 +71,11 @@ namespace LottoLion.WebApi.Controllers
         {
             return await CProxy.UsingAsync(() =>
             {
-                var _result = __db_context.TbLionWinner
+                var _result = __db_context.tb_lion_winner
                                     .OrderByDescending(w => w.SequenceNo)
                                     .ToList();
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     success = true,
                     message = "",
@@ -98,11 +96,11 @@ namespace LottoLion.WebApi.Controllers
         {
             return await CProxy.UsingAsync(() =>
             {
-                var _result = __db_context.TbLionAnalysis
+                var _result = __db_context.tb_lion_analysis
                                     .OrderByDescending(w => w.SequenceNo)
                                     .ToList();
 
-                return new OkObjectResult(new
+                return Ok(new
                 {
                     success = true,
                     message = "",

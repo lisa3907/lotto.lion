@@ -51,5 +51,7 @@
 	<string>9.3</string>
 	<key>CFBundleVersion</key>
 	<string>2020.4.30</string>
+	<key>GADApplicationIdentifier</key>
+	<string></string>
 </dict>
 </plist>
