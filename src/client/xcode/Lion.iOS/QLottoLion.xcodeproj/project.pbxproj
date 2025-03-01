@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C03753B1E89024600E880C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C03753A1E89024600E880C0 /* main.m */; };
+		2C03753E1E89024600E880C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C03753D1E89024600E880C0 /* AppDelegate.m */; };
+		2C0375441E89024600E880C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0375421E89024600E880C0 /* Main.storyboard */; };
+		2C0375461E89024600E880C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0375451E89024600E880C0 /* Assets.xcassets */; };
+		2C0375491E89024600E880C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0375471E89024600E880C0 /* LaunchScreen.storyboard */; };
+		2C1DE8441E9C9C960097E546 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DE8431E9C9C960097E546 /* LoginViewController.m */; };
+		2C42EC901E8CBE3600A42839 /* TimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42EC8F1E8CBE3600A42839 /* TimeFormatter.m */; };
+		2C6136BF1E89F84A001851E9 /* PrizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6136BE1E89F84A001851E9 /* PrizeViewController.m */; };
+		2C6136C21E89FF17001851E9 /* NumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6136C11E89FF17001851E9 /* NumbersViewController.m */; };
+		2C6136C51E89FF40001851E9 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6136C41E89FF40001851E9 /* StoreViewController.m */; };
+		2C6136CA1E8A23B4001851E9 /* prizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6136C81E8A23B4001851E9 /* prizeCell.m */; };
+		2C6136CB1E8A23B4001851E9 /* prizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6136C91E8A23B4001851E9 /* prizeCell.xib */; };
+		2C6136CE1E8A3C96001851E9 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6136CD1E8A3C96001851E9 /* UserNotifications.framework */; };
+		2C6136D81E8B78F7001851E9 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6136D71E8B78F7001851E9 /* Networking.m */; };
+		2C8CDB831E96164E005D51A8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CDB821E96164D005D51A8 /* SettingViewController.m */; };
+		2C8CDB861E963242005D51A8 /* CountSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CDB851E963242005D51A8 /* CountSetViewController.m */; };
+		2C9FE57F1E94BB2500156EE4 /* NumbersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FE57D1E94BB2500156EE4 /* NumbersCell.m */; };
+		2C9FE5801E94BB2500156EE4 /* NumbersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FE57E1E94BB2500156EE4 /* NumbersCell.xib */; };
+		2C9FE5831E95CF7A00156EE4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FE5821E95CF7A00156EE4 /* MessageViewController.m */; };
+		2CA0CB631EA454E0000B0F3A /* NewEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0CB621EA454E0000B0F3A /* NewEmailViewController.m */; };
+		2CA0CB661EA45707000B0F3A /* NewPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0CB651EA45707000B0F3A /* NewPasswordViewController.m */; };
+		2CA0CB691EA48F3E000B0F3A /* logoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0CB681EA48F3E000B0F3A /* logoutViewController.m */; };
+		2CA9B4371EA6FB34006F850F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9B4361EA6FB34006F850F /* Reachability.m */; };
+		2CA9B43A1EA725DF006F850F /* RenewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9B4391EA725DF006F850F /* RenewViewController.m */; };
+		2CD688EB1E9DEAF5007DE2AF /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD688EA1E9DEAF5007DE2AF /* SignUpViewController.m */; };
+		2CD688EF1E9F447B007DE2AF /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD688EE1E9F447B007DE2AF /* GoogleMobileAds.framework */; };
+		2CD688F31E9F44B6007DE2AF /* AdsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD688F11E9F44B6007DE2AF /* AdsViewCell.m */; };
+		2CD688F41E9F44B6007DE2AF /* AdsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD688F21E9F44B6007DE2AF /* AdsViewCell.xib */; };
+		2CD688FE1E9F5704007DE2AF /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD688F81E9F5704007DE2AF /* FirebaseAnalytics.framework */; };
+		2CD688FF1E9F5704007DE2AF /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD688F91E9F5704007DE2AF /* FirebaseCore.framework */; };
+		2CD689001E9F5704007DE2AF /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD688FA1E9F5704007DE2AF /* FirebaseInstanceID.framework */; };
+		2CD689011E9F5704007DE2AF /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD688FB1E9F5704007DE2AF /* GoogleInterchangeUtilities.framework */; };
+		2CD689021E9F5704007DE2AF /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD688FC1E9F5704007DE2AF /* GoogleSymbolUtilities.framework */; };
+		2CD689031E9F5704007DE2AF /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD688FD1E9F5704007DE2AF /* GoogleToolboxForMac.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C0375361E89024600E880C0 /* QLottoLion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLottoLion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C03753A1E89024600E880C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C03753C1E89024600E880C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C03753D1E89024600E880C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C0375431E89024600E880C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C0375451E89024600E880C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C0375481E89024600E880C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C03754A1E89024600E880C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0375511E8902FE00E880C0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2C0375521E8902FE00E880C0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		2C0375531E8902FE00E880C0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2C0375541E8902FE00E880C0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		2C1DE8421E9C9C960097E546 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2C1DE8431E9C9C960097E546 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2C42EC8E1E8CBE3600A42839 /* TimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFormatter.h; sourceTree = "<group>"; };
+		2C42EC8F1E8CBE3600A42839 /* TimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatter.m; sourceTree = "<group>"; };
+		2C6136BD1E89F84A001851E9 /* PrizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeViewController.h; sourceTree = "<group>"; };
+		2C6136BE1E89F84A001851E9 /* PrizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeViewController.m; sourceTree = "<group>"; };
+		2C6136C01E89FF17001851E9 /* NumbersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumbersViewController.h; sourceTree = "<group>"; };
+		2C6136C11E89FF17001851E9 /* NumbersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumbersViewController.m; sourceTree = "<group>"; };
+		2C6136C31E89FF40001851E9 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		2C6136C41E89FF40001851E9 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		2C6136C61E8A040F001851E9 /* QLottoLion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLottoLion.entitlements; sourceTree = "<group>"; };
+		2C6136C71E8A23B4001851E9 /* prizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prizeCell.h; sourceTree = "<group>"; };
+		2C6136C81E8A23B4001851E9 /* prizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prizeCell.m; sourceTree = "<group>"; };
+		2C6136C91E8A23B4001851E9 /* prizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = prizeCell.xib; sourceTree = "<group>"; };
+		2C6136CD1E8A3C96001851E9 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		2C6136D41E8B704A001851E9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2C6136D61E8B78F7001851E9 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		2C6136D71E8B78F7001851E9 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		2C8CDB811E96164D005D51A8 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		2C8CDB821E96164D005D51A8 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		2C8CDB841E963242005D51A8 /* CountSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountSetViewController.h; sourceTree = "<group>"; };
+		2C8CDB851E963242005D51A8 /* CountSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountSetViewController.m; sourceTree = "<group>"; };
+		2C9FE57C1E94BB2500156EE4 /* NumbersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumbersCell.h; sourceTree = "<group>"; };
+		2C9FE57D1E94BB2500156EE4 /* NumbersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumbersCell.m; sourceTree = "<group>"; };
+		2C9FE57E1E94BB2500156EE4 /* NumbersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumbersCell.xib; sourceTree = "<group>"; };
+		2C9FE5811E95CF7A00156EE4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		2C9FE5821E95CF7A00156EE4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		2CA0CB611EA454E0000B0F3A /* NewEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEmailViewController.h; sourceTree = "<group>"; };
+		2CA0CB621EA454E0000B0F3A /* NewEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEmailViewController.m; sourceTree = "<group>"; };
+		2CA0CB641EA45707000B0F3A /* NewPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPasswordViewController.h; sourceTree = "<group>"; };
+		2CA0CB651EA45707000B0F3A /* NewPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPasswordViewController.m; sourceTree = "<group>"; };
+		2CA0CB671EA48F3E000B0F3A /* logoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logoutViewController.h; sourceTree = "<group>"; };
+		2CA0CB681EA48F3E000B0F3A /* logoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logoutViewController.m; sourceTree = "<group>"; };
+		2CA9B4351EA6FB34006F850F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		2CA9B4361EA6FB34006F850F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		2CA9B4381EA725DF006F850F /* RenewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenewViewController.h; sourceTree = "<group>"; };
+		2CA9B4391EA725DF006F850F /* RenewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenewViewController.m; sourceTree = "<group>"; };
+		2CD688E91E9DEAF5007DE2AF /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		2CD688EA1E9DEAF5007DE2AF /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		2CD688EE1E9F447B007DE2AF /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		2CD688F01E9F44B6007DE2AF /* AdsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsViewCell.h; sourceTree = "<group>"; };
+		2CD688F11E9F44B6007DE2AF /* AdsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsViewCell.m; sourceTree = "<group>"; };
+		2CD688F21E9F44B6007DE2AF /* AdsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsViewCell.xib; sourceTree = "<group>"; };
+		2CD688F81E9F5704007DE2AF /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Analytics/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		2CD688F91E9F5704007DE2AF /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Analytics/FirebaseCore.framework; sourceTree = "<group>"; };
+		2CD688FA1E9F5704007DE2AF /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Analytics/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		2CD688FB1E9F5704007DE2AF /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Analytics/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		2CD688FC1E9F5704007DE2AF /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Analytics/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		2CD688FD1E9F5704007DE2AF /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = Analytics/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C0375331E89024600E880C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CD688EF1E9F447B007DE2AF /* GoogleMobileAds.framework in Frameworks */,
+				2C6136CE1E8A3C96001851E9 /* UserNotifications.framework in Frameworks */,
+				2CD689021E9F5704007DE2AF /* GoogleSymbolUtilities.framework in Frameworks */,
+				2CD689001E9F5704007DE2AF /* FirebaseInstanceID.framework in Frameworks */,
+				2CD688FF1E9F5704007DE2AF /* FirebaseCore.framework in Frameworks */,
+				2CD688FE1E9F5704007DE2AF /* FirebaseAnalytics.framework in Frameworks */,
+				2CD689031E9F5704007DE2AF /* GoogleToolboxForMac.framework in Frameworks */,
+				2CD689011E9F5704007DE2AF /* GoogleInterchangeUtilities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C03752D1E89024600E880C0 = {
+			isa = PBXGroup;
+			children = (
+				2C0375381E89024600E880C0 /* QLottoLion */,
+				2C0375371E89024600E880C0 /* Products */,
+				2C0375501E8902FE00E880C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C0375371E89024600E880C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C0375361E89024600E880C0 /* QLottoLion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C0375381E89024600E880C0 /* QLottoLion */ = {
+			isa = PBXGroup;
+			children = (
+				2CD688F71E9F56F8007DE2AF /* FireBase */,
+				2CD688ED1E9F30D3007DE2AF /* GoogleAdsMob */,
+				2C6136C61E8A040F001851E9 /* QLottoLion.entitlements */,
+				2CD688E81E9DE93B007DE2AF /* AppDelegate */,
+				2C6136CC1E8A2405001851E9 /* Cell */,
+				2C6136BD1E89F84A001851E9 /* PrizeViewController.h */,
+				2C6136BE1E89F84A001851E9 /* PrizeViewController.m */,
+				2C6136C01E89FF17001851E9 /* NumbersViewController.h */,
+				2C6136C11E89FF17001851E9 /* NumbersViewController.m */,
+				2C6136C31E89FF40001851E9 /* StoreViewController.h */,
+				2C6136C41E89FF40001851E9 /* StoreViewController.m */,
+				2C9FE5811E95CF7A00156EE4 /* MessageViewController.h */,
+				2C9FE5821E95CF7A00156EE4 /* MessageViewController.m */,
+				2C8CDB811E96164D005D51A8 /* SettingViewController.h */,
+				2C8CDB821E96164D005D51A8 /* SettingViewController.m */,
+				2C8CDB841E963242005D51A8 /* CountSetViewController.h */,
+				2C8CDB851E963242005D51A8 /* CountSetViewController.m */,
+				2C1DE8421E9C9C960097E546 /* LoginViewController.h */,
+				2C1DE8431E9C9C960097E546 /* LoginViewController.m */,
+				2CD688E91E9DEAF5007DE2AF /* SignUpViewController.h */,
+				2CD688EA1E9DEAF5007DE2AF /* SignUpViewController.m */,
+				2CA0CB611EA454E0000B0F3A /* NewEmailViewController.h */,
+				2CA0CB621EA454E0000B0F3A /* NewEmailViewController.m */,
+				2CA0CB641EA45707000B0F3A /* NewPasswordViewController.h */,
+				2CA0CB651EA45707000B0F3A /* NewPasswordViewController.m */,
+				2CA0CB671EA48F3E000B0F3A /* logoutViewController.h */,
+				2CA0CB681EA48F3E000B0F3A /* logoutViewController.m */,
+				2CA9B4381EA725DF006F850F /* RenewViewController.h */,
+				2CA9B4391EA725DF006F850F /* RenewViewController.m */,
+				2C0375421E89024600E880C0 /* Main.storyboard */,
+				2C0375451E89024600E880C0 /* Assets.xcassets */,
+				2C0375471E89024600E880C0 /* LaunchScreen.storyboard */,
+				2C03754A1E89024600E880C0 /* Info.plist */,
+				2C0375391E89024600E880C0 /* Supporting Files */,
+			);
+			path = QLottoLion;
+			sourceTree = "<group>";
+		};
+		2C0375391E89024600E880C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CA9B4351EA6FB34006F850F /* Reachability.h */,
+				2CA9B4361EA6FB34006F850F /* Reachability.m */,
+				2C6136D41E8B704A001851E9 /* PrefixHeader.pch */,
+				2C03753A1E89024600E880C0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C0375501E8902FE00E880C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C6136CD1E8A3C96001851E9 /* UserNotifications.framework */,
+				2C0375511E8902FE00E880C0 /* Bolts.framework */,
+				2C0375521E8902FE00E880C0 /* FBSDKCoreKit.framework */,
+				2C0375531E8902FE00E880C0 /* FBSDKLoginKit.framework */,
+				2C0375541E8902FE00E880C0 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			path = QLottoLion/Frameworks;
+			sourceTree = "<group>";
+		};
+		2C6136CC1E8A2405001851E9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C6136C71E8A23B4001851E9 /* prizeCell.h */,
+				2C6136C81E8A23B4001851E9 /* prizeCell.m */,
+				2C6136C91E8A23B4001851E9 /* prizeCell.xib */,
+				2C9FE57C1E94BB2500156EE4 /* NumbersCell.h */,
+				2C9FE57D1E94BB2500156EE4 /* NumbersCell.m */,
+				2C9FE57E1E94BB2500156EE4 /* NumbersCell.xib */,
+				2CD688F01E9F44B6007DE2AF /* AdsViewCell.h */,
+				2CD688F11E9F44B6007DE2AF /* AdsViewCell.m */,
+				2CD688F21E9F44B6007DE2AF /* AdsViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2CD688E81E9DE93B007DE2AF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C03753C1E89024600E880C0 /* AppDelegate.h */,
+				2C03753D1E89024600E880C0 /* AppDelegate.m */,
+				2C42EC8E1E8CBE3600A42839 /* TimeFormatter.h */,
+				2C42EC8F1E8CBE3600A42839 /* TimeFormatter.m */,
+				2C6136D61E8B78F7001851E9 /* Networking.h */,
+				2C6136D71E8B78F7001851E9 /* Networking.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2CD688ED1E9F30D3007DE2AF /* GoogleAdsMob */ = {
+			isa = PBXGroup;
+			children = (
+				2CD688EE1E9F447B007DE2AF /* GoogleMobileAds.framework */,
+			);
+			name = GoogleAdsMob;
+			sourceTree = "<group>";
+		};
+		2CD688F71E9F56F8007DE2AF /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				2CD688F81E9F5704007DE2AF /* FirebaseAnalytics.framework */,
+				2CD688F91E9F5704007DE2AF /* FirebaseCore.framework */,
+				2CD688FA1E9F5704007DE2AF /* FirebaseInstanceID.framework */,
+				2CD688FB1E9F5704007DE2AF /* GoogleInterchangeUtilities.framework */,
+				2CD688FC1E9F5704007DE2AF /* GoogleSymbolUtilities.framework */,
+				2CD688FD1E9F5704007DE2AF /* GoogleToolboxForMac.framework */,
+			);
+			name = FireBase;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C0375351E89024600E880C0 /* QLottoLion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C03754D1E89024600E880C0 /* Build configuration list for PBXNativeTarget "QLottoLion" */;
+			buildPhases = (
+				2C0375321E89024600E880C0 /* Sources */,
+				2C0375331E89024600E880C0 /* Frameworks */,
+				2C0375341E89024600E880C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLottoLion;
+			productName = QLottoLion;
+			productReference = 2C0375361E89024600E880C0 /* QLottoLion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C03752E1E89024600E880C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = odinsoftware;
+				TargetAttributes = {
+					2C0375351E89024600E880C0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 2C0375311E89024600E880C0 /* Build configuration list for PBXProject "QLottoLion" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 2C03752D1E89024600E880C0;
+			productRefGroup = 2C0375371E89024600E880C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C0375351E89024600E880C0 /* QLottoLion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C0375341E89024600E880C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C6136CB1E8A23B4001851E9 /* prizeCell.xib in Resources */,
+				2C0375491E89024600E880C0 /* LaunchScreen.storyboard in Resources */,
+				2C0375461E89024600E880C0 /* Assets.xcassets in Resources */,
+				2CD688F41E9F44B6007DE2AF /* AdsViewCell.xib in Resources */,
+				2C9FE5801E94BB2500156EE4 /* NumbersCell.xib in Resources */,
+				2C0375441E89024600E880C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C0375321E89024600E880C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA9B43A1EA725DF006F850F /* RenewViewController.m in Sources */,
+				2C6136CA1E8A23B4001851E9 /* prizeCell.m in Sources */,
+				2C9FE5831E95CF7A00156EE4 /* MessageViewController.m in Sources */,
+				2C6136BF1E89F84A001851E9 /* PrizeViewController.m in Sources */,
+				2CA0CB661EA45707000B0F3A /* NewPasswordViewController.m in Sources */,
+				2C6136C51E89FF40001851E9 /* StoreViewController.m in Sources */,
+				2CA0CB631EA454E0000B0F3A /* NewEmailViewController.m in Sources */,
+				2C1DE8441E9C9C960097E546 /* LoginViewController.m in Sources */,
+				2C6136D81E8B78F7001851E9 /* Networking.m in Sources */,
+				2CD688F31E9F44B6007DE2AF /* AdsViewCell.m in Sources */,
+				2C03753E1E89024600E880C0 /* AppDelegate.m in Sources */,
+				2CA9B4371EA6FB34006F850F /* Reachability.m in Sources */,
+				2CA0CB691EA48F3E000B0F3A /* logoutViewController.m in Sources */,
+				2C42EC901E8CBE3600A42839 /* TimeFormatter.m in Sources */,
+				2C6136C21E89FF17001851E9 /* NumbersViewController.m in Sources */,
+				2C03753B1E89024600E880C0 /* main.m in Sources */,
+				2C9FE57F1E94BB2500156EE4 /* NumbersCell.m in Sources */,
+				2CD688EB1E9DEAF5007DE2AF /* SignUpViewController.m in Sources */,
+				2C8CDB831E96164E005D51A8 /* SettingViewController.m in Sources */,
+				2C8CDB861E963242005D51A8 /* CountSetViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C0375421E89024600E880C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C0375431E89024600E880C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C0375471E89024600E880C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C0375481E89024600E880C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C03754B1E89024600E880C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: SEONGAHN LEE (5KCA9A4KT6)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C03754C1E89024600E880C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: SEONGAHN LEE (5KCA9A4KT6)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C03754E1E89024600E880C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QLottoLion/QLottoLion.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: SEONGAHN LEE (5KCA9A4KT6)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72PM7GAUP8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLottoLion/Frameworks",
+					"$(PROJECT_DIR)/QLottoLion",
+					"$(PROJECT_DIR)/QLottoLion/Analytics",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QLottoLion/PrefixHeader.pch";
+				INFOPLIST_FILE = QLottoLion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.odinsoftware.LottoLION;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		2C03754F1E89024600E880C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QLottoLion/QLottoLion.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: SEONGAHN LEE (5KCA9A4KT6)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72PM7GAUP8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLottoLion/Frameworks",
+					"$(PROJECT_DIR)/QLottoLion",
+					"$(PROJECT_DIR)/QLottoLion/Analytics",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QLottoLion/PrefixHeader.pch";
+				INFOPLIST_FILE = QLottoLion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.odinsoftware.LottoLION;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C0375311E89024600E880C0 /* Build configuration list for PBXProject "QLottoLion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C03754B1E89024600E880C0 /* Debug */,
+				2C03754C1E89024600E880C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C03754D1E89024600E880C0 /* Build configuration list for PBXNativeTarget "QLottoLion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C03754E1E89024600E880C0 /* Debug */,
+				2C03754F1E89024600E880C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C03752E1E89024600E880C0 /* Project object */;
+}

@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  sky-walkers-mobile
+//
+//  Created by june hyuk lim on 2015. 8. 27..
+//  Copyright (c) 2015년 oraionsoft. All rights reserved.
+//
+
+#ifndef sky_walkers_mobile_PrefixHeader_pch
+#define sky_walkers_mobile_PrefixHeader_pch
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//#import "GenericDefines.h"
+#import "TimeFormatter.h"
+#import "Networking.h"
+#import "AppDelegate.h"
+#import "Reachability.h"
+@import GoogleMobileAds;
+
+#if RELEASE
+
+#define NSLog(format, ...)
+
+#endif
+
+#endif

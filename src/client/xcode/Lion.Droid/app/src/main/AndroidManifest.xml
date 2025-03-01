@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.odinsoftware.lottolion">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/DefaultTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".popup.NumberPopupActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/DefaultTheme" />
+        <activity
+            android:name=".JoinActivity"
+            android:theme="@style/DefaultTheme" />
+        <activity
+            android:name=".FindPwActivity"
+            android:theme="@style/DefaultTheme" />
+        <activity
+            android:name=".setting.SettingEmailActivity"
+            android:theme="@style/DefaultTheme" />
+        <activity
+            android:name=".setting.SettingPwActivity"
+            android:theme="@style/DefaultTheme" />
+
+        <service android:name=".service.MobileService">
+            <intent-filter>
+                <action android:name="com.odinsoftware.service" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.RefreshTokenService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.PushReceiverService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".service.BroadcastReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".setting.SettingPushActivity"
+            android:theme="@style/DefaultTheme" ></activity>
+    </application>
+
+</manifest>

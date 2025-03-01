@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LottoLion</string>
+    <string name="api_url">https://lottoapi.odinsoftware.co.kr/api/</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8599301686845489/6915028454</string>
+</resources>

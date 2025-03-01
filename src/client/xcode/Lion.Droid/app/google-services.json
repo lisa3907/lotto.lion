@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "257719399649",
+    "firebase_url": "https://lottolion-fc8ca.firebaseio.com",
+    "project_id": "lottolion-fc8ca",
+    "storage_bucket": "lottolion-fc8ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257719399649:android:19bcd5021f2e518c",
+        "android_client_info": {
+          "package_name": "com.odinsoftware.lottolion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257719399649-j0ke9j42r18je5dmqp68s2t6grfr9uou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-uyAdo7bCfx9qsrcLmfb7I6rHITVVkU4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
