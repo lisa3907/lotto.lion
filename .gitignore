@@ -3,6 +3,7 @@
 *.userosscache
 *.sln.docstates
 .vs
+.vscode
 
 *.userprefs
 
