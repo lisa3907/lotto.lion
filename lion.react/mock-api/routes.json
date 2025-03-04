@@ -1,9 +1,0 @@
-{
-  "/api/user/GetGuestToken": "/user/getGuestToken",
-  "/api/user/GetUserInfor": "/user/getUserInfo",
-  "/api/lotto/GetThisWeekPrize": "/lotto/thisWeekPrize",
-  "/api/lotto/GetUserChoices": "/lotto/userChoices",
-  "/api/auth/login": "/auth/login",
-  "/api/user/GetAlertMessages": "/alerts/messages",
-  "/api/user/GetAlertCount": "/alerts/count"
-} 
